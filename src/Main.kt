@@ -1,5 +1,6 @@
 class Expense(var sumExpenses: Int, var category: String, var date: String) {
 
+    constructor(category: String, date: String) : this(0, category, date)
     fun displayList() {
         println("Сумма расхода: $sumExpenses, категория: $category, дата: $date")
     }
@@ -29,8 +30,8 @@ fun main() {
     val expenses = ExpenseTracker()
 
     expenses.addExpense(Expense(1234, "Продукты", "06/09/2024"))
-    expenses.addExpense(Expense(54, "Транспорт", "12/05/2024"))
-    expenses.addExpense(Expense(321, "Развлечения", "16/07/2024"))
+    expenses.addExpense(Expense(54, "Развлечения", "12/05/2024"))
+    expenses.addExpense(Expense(321, "Транспорт", "16/07/2024"))
     expenses.addExpense(Expense(5678, "Продукты", "26/08/2024"))
 
     println("Все расходы:")
